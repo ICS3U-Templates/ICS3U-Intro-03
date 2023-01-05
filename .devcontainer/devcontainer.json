@@ -55,7 +55,6 @@
 				"ms-python.python",
 				"ms-python.black-formatter",
 				"hediet.vscode-drawio",
-				//"streetsidesoftware.code-spell-checker",
 				"PKief.material-icon-theme"
 			]
 		}
