@@ -37,21 +37,25 @@
 				"htmlhint.enable": true,
 				"python.linting.enabled": true,
 				"python.defaultInterpreterPath": "/usr/local/python/bin/python",
-				"python.formatting.blackArgs": ["--line-length", "120"],
-				"python.formatting.provider": "black",
+				//"python.formatting.blackArgs": ["--line-length", "120"],
+				"python.formatting.provider": "none"
 				"window.menuBarVisibility": "classic",
 				"workbench.activityBar.visible": false,
 				"workbench.iconTheme": "material-icon-theme",
 				"workbench.colorTheme": "GitHub Dark",
 				"workbench.startupEditor": "none",
 				"workbench.tips.enabled": false,
-				"workbench.welcomePage.walkthroughs.openOnInstall": false
+				"workbench.welcomePage.walkthroughs.openOnInstall": false,
+				"[python]": {
+					"editor.defaultFormatter": "ms-python.black-formatter"
+				}
 			},
 			"extensions": [
 				"ms-vscode.cpptools-extension-pack",
 				"ms-python.python",
+				"ms-python.black-formatter",
 				"hediet.vscode-drawio",
-				"streetsidesoftware.code-spell-checker",
+				//"streetsidesoftware.code-spell-checker",
 				"PKief.material-icon-theme"
 			]
 		}
