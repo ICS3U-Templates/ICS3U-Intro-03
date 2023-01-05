@@ -29,6 +29,7 @@
 				"editor.smoothScrolling": true,
 				"editor.tabSize": 2,
 				"explorer.confirmDragAndDrop": false,
+				"extensions.ignoreRecommendations":true,
 				"git.autofetch": true,
 				"git.confirmSync": false,
 				"git.enableSmartCommit": true,
@@ -47,10 +48,14 @@
 				"workbench.welcomePage.walkthroughs.openOnInstall": false,
 				"[python]": {
 					"editor.defaultFormatter": "ms-python.black-formatter"
+				},
+				"[cpp]": {
+					"editor.defaultFormatter": "mine.cpplint"
 				}
 			},
 			"extensions": [
 				"ms-vscode.cpptools-extension-pack",
+				"mine.cpplint",
 				"ms-python.python",
 				"ms-python.black-formatter",
 				"hediet.vscode-drawio",
