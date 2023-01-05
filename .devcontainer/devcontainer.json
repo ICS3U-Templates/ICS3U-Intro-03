@@ -59,7 +59,9 @@
 				"PKief.material-icon-theme"
 			]
 		}
-	}
+	},
+		// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "sudo apt-get update && export DEBIAN_FRONTEND=noninteractive && sudo apt-get -y install --no-install-recommends build-essential gdb"
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
