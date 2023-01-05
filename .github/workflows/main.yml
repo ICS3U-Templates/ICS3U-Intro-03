@@ -3,13 +3,13 @@
 ##################################################
 
 ---
-name: Mr Coxall's Super Linter 🖥️
+name: Mr Coxall's Super Linter
 
 on: [push, pull_request]
 
 jobs:
   run-linters:
-    name: Mr Coxall's Super Linter 🖥️
+    name: Mr Coxall's Super Linter
     runs-on: ubuntu-latest
 
     steps:
