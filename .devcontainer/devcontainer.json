@@ -36,7 +36,6 @@
 				"html.format.extraLiners": "",
 				"htmlhint.enable": true,
 				"python.linting.enabled": true,
-				"python.defaultInterpreterPath": "/usr/local/python/bin/python",
 				"python.formatting.blackArgs": ["--line-length", "120"],
 				"python.formatting.provider": "none",
 				"window.menuBarVisibility": "classic",
