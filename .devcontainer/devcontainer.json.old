@@ -1,0 +1,60 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.233.0/containers/debian
+{
+	"name": "Debian",
+	"build": {
+		"dockerfile": "Dockerfile",
+		// Update 'VARIANT' to pick an Debian version: bullseye, buster
+		// Use bullseye on local arm64/Apple Silicon.
+		"args": { "VARIANT": "bullseye" }
+	},
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+    "breadcrumbs.enabled": true,
+    "editor.autoClosingQuotes": "always",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.folding": false,
+    "editor.formatOnPaste": true,
+    "editor.guides.bracketPairs": true,
+    "editor.guides.indentation": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.insertSpaces": true,
+    "editor.minimap.enabled": false,
+    "editor.mouseWheelZoom": true,
+    "editor.lineNumbers": "on",
+    "editor.renderWhitespace": "all",
+    "editor.smoothScrolling": true,
+    "editor.tabSize": 2,
+    "explorer.confirmDragAndDrop": false,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "html.autoClosingTags": true,
+    "html.format.extraLiners": "",
+    "htmlhint.enable": true,
+    "python.linting.enabled": true,
+    "python.defaultInterpreterPath": "/usr/local/python/bin/python",
+    "python.formatting.blackArgs": ["--line-length", "120"],
+    "python.formatting.provider": "black",
+    "window.menuBarVisibility": "classic",
+    "workbench.activityBar.visible": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "GitHub Dark",
+    "workbench.startupEditor": "none",
+    "workbench.tips.enabled": false,
+    "workbench.welcomePage.walkthroughs.openOnInstall": false
+  },
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"ms-vscode.cpptools-extension-pack",
+		"hediet.vscode-drawio",
+		"streetsidesoftware.code-spell-checker",
+		"PKief.material-icon-theme"
+	],
+
+	// Uncomment the next line to use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "pip3 install cpplint"
+}
