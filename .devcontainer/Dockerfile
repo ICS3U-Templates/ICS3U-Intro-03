@@ -11,4 +11,4 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 
 #RUN export DEBIAN_FRONTEND=noninteractive && apt-get -qy update && apt-get -qy upgrade
 # for C++
-RUN apt-get -qy install --no-install-recommends build-essential gdb
+#RUN apt-get -qy install --no-install-recommends build-essential gdb
