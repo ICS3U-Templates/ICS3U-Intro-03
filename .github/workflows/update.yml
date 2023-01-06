@@ -1,0 +1,46 @@
+###############################################################
+# Updates the README.md file badge that GitHub Classroom adds #
+###############################################################
+
+---
+name: GitHub Classroom README.md Updater
+
+on: [push, pull_request]
+
+jobs:
+  run-linters:
+    name: GitHub Classroom README.md Updater
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository 🚦
+        uses: actions/checkout@main
+
+      - name: Run Change README.md file ✍️
+        env:
+          GITHUB_USER: ${{github.actor}}
+          GITHUB_OWNER: ${{ github.repository_owner }}
+          GITHUB_OWNER_REPO_NAME: ${{ github.repository }}
+          GITHUB_REPO_NAME: ${{ github.event.repository.name }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          #!/bin/bash
+          echo "Maybe changing the README.md file ..."
+          FIRST_CHAR=$(head -c 1 ./README.md)
+          if [ "$FIRST_CHAR" = "[" ]
+          then
+            ex -s -c 1m3 -c w -c q ./README.md
+            sed -i "s/<OWNER>/$GITHUB_OWNER/g" ./README.md
+            sed -i "s/<REPOSITORY>/$GITHUB_REPO_NAME/g" ./README.md
+            echo "README.md updated."
+          elif [ "$FIRST_CHAR" = "#" ]
+          then
+            echo "Already changed."
+          else
+            echo "Not what it should be!"
+            exit 1
+          fi
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Commit README.md changes
