@@ -30,6 +30,7 @@ jobs:
           if [ "$FIRST_CHAR" = "[" ]
           then
             ex -s -c 1m3 -c w -c q ./README.md
+            sed -i "3G" ./README.md
             sed -i "s/<OWNER>/$GITHUB_OWNER/g" ./README.md
             sed -i "s/<REPOSITORY>/$GITHUB_REPO_NAME/g" ./README.md
             echo "README.md updated."
