@@ -1,6 +1,6 @@
-##############################
-# Updates the README.md file #
-##############################
+##################################################
+# Run Mr Coxall's Super Linter against code base #
+##################################################
 
 ---
 name: GitHub Classroom README.md Updater
