@@ -68,7 +68,7 @@
 		}
 	},
 		// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sudo apt-get update && export DEBIAN_FRONTEND=noninteractive && sudo apt-get -y install --no-install-recommends build-essential gdb && sudo pip3 install cpplint"
+	"postCreateCommand": "bash ./initial_startp.sh"
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
