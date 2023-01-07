@@ -31,7 +31,7 @@ then
     sed -i "s/<REPOSITORY>/$GITHUB_REPO_NAME/g" ./README.md
     cp ./.devcontainer/.bashrc ~/.bashrc
     # shellcheck disable=SC1090
-    source ~/.bashrc
+    #source ~/.bashrc
     git add -A
     git commit -m "updated the badges"
     git push origin main
