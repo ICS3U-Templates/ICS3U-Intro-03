@@ -6,8 +6,8 @@ sudo apt-get -y install --no-install-recommends build-essential gdb
 sudo pip3 install cpplint
 
 # now update the README.md file
-GITHUB_REPO_NAME=$(git config user.name)
-GITHUB_OWNER=$(basename -s .git `git config --get remote.origin.url`)
+GITHUB_OWNER=$(git config user.name)
+GITHUB_REPO_NAME=$(basename -s .git `git config --get remote.origin.url`)
 
 FIRST_CHAR=$(head -c 1 ./README.md)
 if [ "$FIRST_CHAR" = "[" ]
@@ -16,6 +16,9 @@ then
     sed -i "3G" ./README.md
     sed -i "s/<OWNER>/$GITHUB_OWNER/g" ./README.md
     sed -i "s/<REPOSITORY>/$GITHUB_REPO_NAME/g" ./README.md
+    git add -A
+    git commit -m "updted the badges"
+    git push origin main
     echo "README.md updated."
 elif [ "$FIRST_CHAR" = "#" ]
 then

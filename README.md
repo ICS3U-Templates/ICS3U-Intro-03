@@ -20,7 +20,7 @@
 **REMEMBER:**
 - ensure you commit your code after every major change, to keep your history
 ```
-  - git commit -A
+  - git add -A
   - git commit -m "commit message"
   - git push origin main
 ```
