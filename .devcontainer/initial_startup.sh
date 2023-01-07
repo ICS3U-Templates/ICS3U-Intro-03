@@ -7,20 +7,19 @@ sudo pip3 install cpplint
 
 # now update the README.md file
 GITHUB_URL=$(git remote get-url origin)
-GITHUB_USER=$(git config user.name)
-#GITHUB_REPO_NAME=$(basename -s .git `git config --get remote.origin.url`)
-GITHUB_REPO_NAME=$(basename -s .git $(git config --get remote.origin.url))
+#GITHUB_USER=$(git config user.name)
+GITHUB_REPO_NAME=$(basename -s .git "$(git config --get remote.origin.url)")
 
 # from: https://serverfault.com/questions/417241/extract-repository-name-from-github-url-in-bash
 
 re="^(https|git)(:\/\/|@)([^\/:]+)[\/:]([^\/:]+)\/(.+)(.git)*$"
 
 if [[ $GITHUB_URL =~ $re ]]; then
-    PROTOCOL=${BASH_REMATCH[1]}
-    SEPERATOR=${BASH_REMATCH[2]}
+    #PROTOCOL=${BASH_REMATCH[1]}
+    #SEPERATOR=${BASH_REMATCH[2]}
     HOSTNAME=${BASH_REMATCH[3]}
     GITHUB_REPO_OWNER=${BASH_REMATCH[4]}
-    REPO=${BASH_REMATCH[5]}
+    #REPO=${BASH_REMATCH[5]}
 fi
 
 FIRST_CHAR=$(head -c 1 ./README.md)
