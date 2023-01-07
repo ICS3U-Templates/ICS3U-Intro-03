@@ -15,7 +15,7 @@ GITHUB_REPO_NAME=$(basename -s .git $(git config --get remote.origin.url))
 
 re="^(https|git)(:\/\/|@)([^\/:]+)[\/:]([^\/:]+)\/(.+)(.git)*$"
 
-if [[ $url =~ $re ]]; then
+if [[ $GITHUB_URL =~ $re ]]; then
     PROTOCOL=${BASH_REMATCH[1]}
     SEPERATOR=${BASH_REMATCH[2]}
     HOSTNAME=${BASH_REMATCH[3]}
