@@ -17,7 +17,7 @@ re="^(https|git)(:\/\/|@)([^\/:]+)[\/:]([^\/:]+)\/(.+)(.git)*$"
 if [[ $GITHUB_URL =~ $re ]]; then
     #PROTOCOL=${BASH_REMATCH[1]}
     #SEPERATOR=${BASH_REMATCH[2]}
-    HOSTNAME=${BASH_REMATCH[3]}
+    #HOSTNAME=${BASH_REMATCH[3]}
     GITHUB_REPO_OWNER=${BASH_REMATCH[4]}
     #REPO=${BASH_REMATCH[5]}
 fi
