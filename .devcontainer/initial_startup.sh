@@ -18,7 +18,7 @@ then
     sed -i "s/<OWNER>/$GITHUB_OWNER/g" ./README.md
     sed -i "s/<REPOSITORY>/$GITHUB_REPO_NAME/g" ./README.md
     git add -A
-    git commit -m "updted the badges"
+    git commit -m "updated the badges"
     git push origin main
     echo "README.md updated."
 elif [ "$FIRST_CHAR" = "#" ]
