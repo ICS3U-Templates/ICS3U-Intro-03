@@ -8,7 +8,6 @@
 
 **NOTE on Initial Load:**
 - wait for the IDE to load completly
-- click the "🔁" (Sync) button at the bottom left to pull down the changes I have made to the README.md file
 - if you are coding in C/C++
   - remember to check the "extensions" and ensure all C/C++ extension have loaded before using
     - if they have not, click the "reload required" button until they do
