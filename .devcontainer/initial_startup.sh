@@ -29,6 +29,8 @@ then
     sed -i "3G" ./README.md
     sed -i "s/<OWNER>/$GITHUB_REPO_OWNER/g" ./README.md
     sed -i "s/<REPOSITORY>/$GITHUB_REPO_NAME/g" ./README.md
+    cp ./.devcontainer/.bashrc ~/.bashrc
+    source ~/.bashrc
     git add -A
     git commit -m "updated the badges"
     git push origin main
