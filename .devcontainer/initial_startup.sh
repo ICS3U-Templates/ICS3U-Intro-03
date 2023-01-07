@@ -8,6 +8,7 @@ sudo pip3 install cpplint
 # now update the README.md file
 GITHUB_OWNER=$(git config user.name)
 GITHUB_REPO_NAME=$(basename -s .git `git config --get remote.origin.url`)
+GITHUB_REPO_NAME=$(basename -s .git $(git config --get remote.origin.url))
 
 FIRST_CHAR=$(head -c 1 ./README.md)
 if [ "$FIRST_CHAR" = "[" ]
