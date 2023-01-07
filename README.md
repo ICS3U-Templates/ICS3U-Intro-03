@@ -6,18 +6,18 @@
 
 ---
 
-**NOTES on INITIAL LOAD:**
+**NOTES ON INITIAL LOAD:**
 - wait for the IDE to load completly
 - if you are coding in C/C++
   - when you run or debug a C/C++ program for the first time, the IDE will ask what compiler to use; select the 1st choice (C/C++: g++)
-    - the IDE will place a task.json file in the .vscode directory
+  - the IDE will place a task.json file in the .vscode directory
 
 ---
 
 **REMEMBER:**
 - ensure you commit your code after every major change, to keep your history
 ```console
-  - git add -A
-  - git commit -m "commit message"
-  - git push origin main
+  git add -A
+  git commit -m "𝑐𝑜𝑚𝑚𝑖𝑡 𝑚𝑒𝑠𝑠𝑎𝑔𝑒"
+  git push origin main
 ```
