@@ -17,7 +17,7 @@ re="^(https|git)(:\/\/|@)([^\/:]+)[\/:]([^\/:]+)\/(.+)(.git)*$"
 if [[ $GITHUB_URL =~ $re ]]; then
     #PROTOCOL=${BASH_REMATCH[1]}
     #SEPERATOR=${BASH_REMATCH[2]}
-    #HOSTNAME=${BASH_REMATCH[3]}
+    HOSTNAME=${BASH_REMATCH[3]}
     GITHUB_REPO_OWNER=${BASH_REMATCH[4]}
     #REPO=${BASH_REMATCH[5]}
 fi
@@ -30,7 +30,8 @@ then
     sed -i "s/<OWNER>/$GITHUB_REPO_OWNER/g" ./README.md
     sed -i "s/<REPOSITORY>/$GITHUB_REPO_NAME/g" ./README.md
     cp ./.devcontainer/.bashrc ~/.bashrc
-    source /home/vscode/.bashrc
+    # shellcheck disable=SC1090
+    source ~/.bashrc
     git add -A
     git commit -m "updated the badges"
     git push origin main
