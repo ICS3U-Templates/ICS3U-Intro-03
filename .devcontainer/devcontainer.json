@@ -42,6 +42,8 @@
 				"python.formatting.blackArgs": ["--line-length", "120"],
 				"python.formatting.provider": "none",
 				"terminal.integrated.fontSize": 20,
+				"terminal.integrated.rightClickBehavior": "copyPaste",
+				"terminal.integrated.copyOnSelection": true,
 				"window.menuBarVisibility": "classic",
 				"workbench.activityBar.visible": false,
 				"workbench.iconTheme": "material-icon-theme",
