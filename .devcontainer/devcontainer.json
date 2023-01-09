@@ -3,7 +3,7 @@
 {
     "name": "Mr Coxall - Codespace Image",
     // Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": "bash ./.devcontainer/initial_startup.sh",
+    "postCreateCommand": "bash ./.devcontainer/startup.sh",
     "customizations": {
         // Configure properties specific to VS Code.
         "vscode": {

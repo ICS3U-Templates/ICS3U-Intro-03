@@ -31,7 +31,6 @@ then
     git push origin main
     # shellcheck disable=SC1090
     source ~/.bashrc 
-    #exec bash
     echo "README.md updated."
 elif [ "$FIRST_CHAR" = "#" ]
 then
