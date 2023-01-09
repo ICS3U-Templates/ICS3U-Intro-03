@@ -25,12 +25,11 @@ then
     sed -i "3G" ./README.md
     sed -i "s/<OWNER>/$GITHUB_REPO_OWNER/g" ./README.md
     sed -i "s/<REPOSITORY>/$GITHUB_REPO_NAME/g" ./README.md
-    # shellcheck disable=SC1090
-    #source ~/.bashrc
-    exec bash
     git add -A
     git commit -m "updated the badges"
     git push origin main
+    # shellcheck disable=SC1090
+    exec bash
     echo "README.md updated."
 elif [ "$FIRST_CHAR" = "#" ]
 then
