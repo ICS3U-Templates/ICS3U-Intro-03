@@ -70,8 +70,9 @@
         "ghcr.io/devcontainers-contrib/features/black:2": {}
     },
     // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-    "image": "mcr.microsoft.com/devcontainers/base:bullseye",
-    "name": "Mr Coxall - Debian(Bullseye)",
+    //"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "name": "Mr Coxall - Codespace Image",
     // Use 'postCreateCommand' to run commands after the container is created.
     "postCreateCommand": "bash ./.devcontainer/initial_startup.sh"
     // Features to add to the dev container. More info: https://containers.dev/features.
