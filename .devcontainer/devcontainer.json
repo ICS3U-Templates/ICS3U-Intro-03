@@ -45,7 +45,6 @@
                     "--line-length",
                     "120"
                 ],
-                "python.formatting.provider": "none",
                 "python.linting.enabled": true,
                 "terminal.integrated.copyOnSelection": true,
                 "terminal.integrated.fontSize": 20,
