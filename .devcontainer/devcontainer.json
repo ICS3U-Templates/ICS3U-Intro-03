@@ -9,13 +9,6 @@
         "vscode": {
             // Set *default* container specific settings.json values on container create.
             "settings": {
-                "[cpp]": {
-                    "editor.defaultFormatter": "mine.cpplint"
-                },
-                "[python]": {
-                    "editor.defaultFormatter": "ms-python.black-formatter"
-                },
-                "breadcrumbs.enabled": true,
                 "editor.autoClosingQuotes": "always",
                 "editor.bracketPairColorization.enabled": true,
                 "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
