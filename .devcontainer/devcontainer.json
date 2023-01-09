@@ -27,6 +27,7 @@
                 "editor.tabSize": 4,
                 "explorer.confirmDragAndDrop": false,
                 "extensions.ignoreRecommendations": true,
+                "files.eol": "\n",
                 "git.autofetch": true,
                 "git.confirmSync": false,
                 "git.enableSmartCommit": true,
