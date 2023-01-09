@@ -21,6 +21,7 @@ FIRST_CHAR=$(head -c 1 ./README.md)
 if [ "$FIRST_CHAR" = "[" ]
 then
     cp ./.devcontainer/.bashrc ~/.bashrc
+    sudo pip3 install cpplint
     ex -s -c 1m3 -c w -c q ./README.md
     sed -i "3G" ./README.md
     sed -i "s/<OWNER>/$GITHUB_REPO_OWNER/g" ./README.md
