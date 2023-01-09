@@ -66,9 +66,6 @@
             }
         }
     },
-    "features": {
-        "ghcr.io/devcontainers-contrib/features/black:2": {}
-    },
     // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
     //"image": "mcr.microsoft.com/devcontainers/base:bullseye",
     "image": "mcr.microsoft.com/devcontainers/universal:2",
