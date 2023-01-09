@@ -29,7 +29,8 @@ then
     git commit -m "updated the badges"
     git push origin main
     # shellcheck disable=SC1090
-    exec bash
+    source ~/.bashrc 
+    #exec bash
     echo "README.md updated."
 elif [ "$FIRST_CHAR" = "#" ]
 then
